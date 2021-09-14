@@ -59,13 +59,22 @@
 
 11. git回滚某一次提交的方式
     - git revert commitId
+    
 12. php执行一个sql的时候的流程
     - 先检查执行的用户权限
     - 查看查询池中有没有已经查询过的
     - 调用底层查询引擎进行查询
     - 写入缓存并返回结果
+    
 13. include和require的区别
     - include用到时加载，require一开始就加载
     - include报错不会终止程序，require报错会终止程序
     - include多次的时候每次都要读取文件，require只需要读取一次文件就可以
+    
 14. array_merge不会覆盖相同的值
+
+15. redis的持久化方案
+
+    - AOF和RDB
+    - AOF是记录每一条执行的写语句（查不记录），数据完整，在redis的配置文件中配置appendonly yes，appendsync 秒即可
+    - RDB是定时启动子进程形成一个快照，不影响主进程处理业务
